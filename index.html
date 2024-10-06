@@ -16,20 +16,26 @@
     <div class="container">
       <header>
         <form>
-          <input type="search" placeholder="Enter a city" />
-          <input type="submit" placeholder="search" />
+          <input type="search" placeholder="Enter a city" class="searching" />
+          <input type="submit" placeholder="search" class="search-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Paris</h1>
-          <div>17</div>
+        <div class="weather-display">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="info">
+              <span id="current-date"></span>, moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="current-temperature-icon">☀️</span
+            ><span class="current-temperature-value" id="current-temperature"
+              >24</span
+            ><span class="current-temperature-unit">°C</span>
+          </div>
         </div>
-        <p>
-          <span>Tuesday 5:08</span>, <span>Overcast clouds </span>
-          <br />
-          Humidity: <span>45</span>%, wind: <span>45</span>km/h
-        </p>
       </main>
       <footer>
         coded by
