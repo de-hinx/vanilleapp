@@ -44,7 +44,11 @@ function weather(response) {
 
   let changeHeader = document.querySelector(".current-city");
   changeHeader.innerHTML = response.data.city;
-  //console.log(response.data.condition.description);
+  console.log(response.data);
   let newCon = document.querySelector(".current-condition");
   newCon.innerHTML = response.data.condition.description;
+  let newHumidity = document.querySelector(".number");
+  newHumidity.innerHTML = response.data.temperature.humidity;
+  let newWindSpeed = document.querySelector(".wind-speed");
+  newWindSpeed.innerHTML = response.data.wind.speed;
 }
