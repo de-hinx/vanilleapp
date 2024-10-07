@@ -44,7 +44,7 @@ function weather(response) {
 
   let changeHeader = document.querySelector(".current-city");
   changeHeader.innerHTML = response.data.city;
-  console.log(response.data.condition.description);
+  //console.log(response.data.condition.description);
+  let newCon = document.querySelector(".current-condition");
+  newCon.innerHTML = response.data.condition.description;
 }
-let newCon = document.querySelector(".current-condition");
-newCon.innerHTML = `apple`;
