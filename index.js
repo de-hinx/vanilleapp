@@ -39,7 +39,7 @@ let time = document.querySelector("#current-date");
 time.innerHTML = currentTime;
 
 function weather(response) {
-  let newTemp = document.querySelector(".current-temperature");
+  let newTemp = document.querySelector("#current-temperature");
   newTemp.innerHTML = Math.round(response.data.temperature.current);
 
   let changeHeader = document.querySelector(".current-city");
