@@ -1,13 +1,19 @@
-function country() {
+function country(event) {
   event.preventDefault();
   let searching = document.querySelector("#search-input");
   //alert(searching.value);
-  let city = searching.value;
+  //let cityNew = searching.value;
+  search(searching.value);
+}
+
+function search(city) {
   let sheCode = "77bdfc047f054f23dabe6bdof740t2a3";
   let urlApi = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${sheCode}&units=metric`;
 
   axios.get(urlApi).then(weather);
 }
+search("Paris");
+
 let formName = document.querySelector("form");
 
 formName.addEventListener("submit", country);
@@ -51,4 +57,9 @@ function weather(response) {
   newHumidity.innerHTML = response.data.temperature.humidity;
   let newWindSpeed = document.querySelector(".wind-speed");
   newWindSpeed.innerHTML = response.data.wind.speed;
+
+  let newIcon = document.querySelector("#icon");
+  newIcon.innerHTML = `<img
+                src="${response.data.condition.icon_url}"
+                class="current-temperature-icon" />`;
 }
