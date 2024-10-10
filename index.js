@@ -63,3 +63,21 @@ function weather(response) {
                 src="${response.data.condition.icon_url}"
                 class="current-temperature-icon" />`;
 }
+
+function displayForecast(display) {
+  let days = ["thurs", "fri", "sat", "sun", "Mon"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml += `<div class="days">
+            <div class="day">${day}</div>
+            <div class="emoji">⛅</div>
+            <div class="degrees">
+              <span class="degree"><strong>16°</strong></span
+              ><span class="degree">11°</span>
+            </div>
+          </div>`;
+  });
+  let weatherForecast = document.querySelector(".forecast");
+  weatherForecast.innerHTML = forecastHtml;
+}
+displayForecast();

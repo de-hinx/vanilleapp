@@ -112,5 +112,9 @@ a {
   font-size: 38px;
 }
 .degree {
-  padding: 0px 5px;
+  padding: 0px 6px;
+}
+.forecast {
+  display: flex;
+  justify-content: space-around;
 }
