@@ -109,7 +109,8 @@ a {
 
 .emoji {
   text-align: center;
-  font-size: 38px;
+  width: 78px;
+  height: 78px;
 }
 .degree {
   padding: 0px 6px;
